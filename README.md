@@ -17,7 +17,7 @@ affiliation.
 
 | Document | What it covers |
 |---|---|
-| [PROMPTS.md](PROMPTS.md) | Every prompt used to build this, verbatim and in order |
+| [PROMPTS.md](PROMPTS.md) | The specification, and the build in twelve stages |
 | [AI_USAGE.md](AI_USAGE.md) | AI tools used, accepted/rejected output, 12 defects found, verification performed |
 | [TRANSCRIPT.md](TRANSCRIPT.md) | Session transcript with real command output |
 | [TEST_OUTPUT.md](TEST_OUTPUT.md) | Test run output and what each of the 22 tests guards against |
