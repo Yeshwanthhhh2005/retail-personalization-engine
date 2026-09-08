@@ -1,0 +1,27 @@
+# Core numerics and data
+numpy==1.26.4
+pandas==2.2.0
+scipy==1.15.3
+pyarrow==24.0.0
+
+# Models
+torch==2.9.1                # two-tower retrieval (CPU wheel is sufficient)
+lightgbm==4.6.0             # LambdaRank second stage
+scikit-learn==1.4.0         # TF-IDF for the lexical RAG channel, utilities
+threadpoolctl==3.6.0        # pins BLAS threads for the batched ALS solves
+
+# Vector retrieval
+faiss-cpu==1.15.0
+
+# Serving
+fastapi==0.141.1
+uvicorn>=0.30
+pydantic==2.10.3
+httpx2>=0.28                # required by starlette's TestClient
+
+# Optional -----------------------------------------------------------------
+# anthropic>=1.0             # live Claude calls; without it the LLM gateway
+#                            # runs its deterministic offline provider
+# pyspark==3.5.0             # production feature pipeline; needs a JVM, which
+#                            # is why src/features/spark_pipeline.py is
+#                            # contract-tested rather than executed here

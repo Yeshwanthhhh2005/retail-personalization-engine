@@ -1,0 +1,25 @@
+# Generated data and model artifacts.
+# Everything here rebuilds deterministically from a fixed seed via
+# `python -m scripts.run_all`, so none of it belongs in version control.
+data_lake/
+artifacts/
+
+# Generated reports: keep the small CSV/JSON summaries, drop the bulk.
+reports/*.parquet
+reports/*.log
+reports/llm_audit.jsonl
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Tooling / OS
+.pytest_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

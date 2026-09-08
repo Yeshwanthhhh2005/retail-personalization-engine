@@ -1,0 +1,63 @@
+{
+  "repeat_vs_discovery": {
+    "repeat_recall": 0.9962928637627433,
+    "discovery_recall": 0.12775468590698769,
+    "repeat_share_of_truth": 0.4583492629879784
+  },
+  "by_segment": [
+    {
+      "history_purchases": "1-5",
+      "customers": 163,
+      "recall@20": 0.5196684195150453
+    },
+    {
+      "history_purchases": "6-15",
+      "customers": 3570,
+      "recall@20": 0.5286638594831872
+    },
+    {
+      "history_purchases": "16-30",
+      "customers": 4879,
+      "recall@20": 0.5589645614343298
+    },
+    {
+      "history_purchases": "31-60",
+      "customers": 330,
+      "recall@20": 0.570974025974026
+    }
+  ],
+  "source_contribution": [
+    {
+      "source": "repeat",
+      "slate_share": 0.4917533266241753,
+      "hits": 10750,
+      "precision": 0.12222159058609516,
+      "exclusive_slots": 4741,
+      "exclusive_hits": 326
+    },
+    {
+      "source": "two_tower",
+      "slate_share": 0.8970423795147042,
+      "hits": 11535,
+      "precision": 0.07189379538159493,
+      "exclusive_slots": 20141,
+      "exclusive_hits": 335
+    },
+    {
+      "source": "item_knn",
+      "slate_share": 0.6241976965224197,
+      "hits": 7178,
+      "precision": 0.06429364766579485,
+      "exclusive_slots": 2324,
+      "exclusive_hits": 41
+    },
+    {
+      "source": "popularity",
+      "slate_share": 0.22244772447724478,
+      "hits": 1660,
+      "precision": 0.041722170558222534,
+      "exclusive_slots": 1665,
+      "exclusive_hits": 22
+    }
+  ]
+}
