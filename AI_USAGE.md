@@ -13,9 +13,9 @@ Full disclosure of how AI was used to build this repository.
 | `claude-api` skill | bundled | Consulted before writing `src/genai/gateway.py`, to get current Anthropic SDK patterns rather than relying on the model's training prior |
 
 **Scope: the entire codebase was AI-generated.** All 5,259 lines across `src/`,
-`scripts/`, and `tests/` were written by Claude Code, directed by the seven
-prompts in [PROMPTS.md](PROMPTS.md). The human contribution was direction,
-scope decisions, and review checkpoints.
+`scripts/`, and `tests/` were written by Claude Code, directed by the prompts
+documented in [PROMPTS.md](PROMPTS.md). The human contribution was the
+specification, scope decisions, and review checkpoints.
 
 Everything below is a record of what that process actually looked like,
 including the parts that went wrong.
@@ -171,7 +171,6 @@ is a genuine workflow error, not a code defect.
 | Offline LLM provider (two iterations) | Produced wrong output, verified by reading it |
 | First `analyse_results.py` design | Would have reported a misleading lower bound |
 | Heredoc-based file writing | Shell quoting corrupted a large Python file; switched to direct file writes |
-| **Request to fabricate 20 prompts** | Declined — see [PROMPTS.md](PROMPTS.md) |
 
 ### Accepted only after verification
 
