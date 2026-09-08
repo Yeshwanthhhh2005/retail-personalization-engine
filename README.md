@@ -13,6 +13,23 @@ affiliation.
 
 ---
 
+## Documentation
+
+| Document | What it covers |
+|---|---|
+| [PROMPTS.md](PROMPTS.md) | Every prompt used to build this, verbatim and in order |
+| [AI_USAGE.md](AI_USAGE.md) | AI tools used, accepted/rejected output, 12 defects found, verification performed |
+| [TRANSCRIPT.md](TRANSCRIPT.md) | Session transcript with real command output |
+| [TEST_OUTPUT.md](TEST_OUTPUT.md) | Test run output and what each of the 22 tests guards against |
+| [`tests/`](tests/) | The test suite itself |
+| [CI](../../actions) | GitHub Actions — all 22 tests on every push |
+
+**This codebase was written by Claude Code (`claude-opus-5`).** The human
+contribution was direction, scope decisions, and review. `AI_USAGE.md` is the
+honest account, including what the model got wrong.
+
+---
+
 ## Headline result
 
 Evaluated on a held-out **future week** (days 113–119), scoring 8,943 customers

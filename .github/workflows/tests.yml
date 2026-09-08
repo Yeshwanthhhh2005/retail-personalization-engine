@@ -1,0 +1,37 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"     # matches the development environment
+          cache: pip
+
+      # The test suite deliberately depends on numpy and pandas only. The
+      # metric, gateway and feature-contract modules import nothing heavier,
+      # so CI does not pull torch, faiss or lightgbm to run them -- and the
+      # LLM tests need no API key, running against the gateway's deterministic
+      # offline provider.
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "numpy==1.26.4" "pandas==2.2.0"
+
+      - name: Metric layer (9 tests)
+        run: python -m tests.test_metrics
+
+      - name: LLM gateway governance (8 tests)
+        run: python -m tests.test_genai
+
+      - name: Spark/pandas feature contract (5 tests)
+        run: python -m tests.test_spark_contract
